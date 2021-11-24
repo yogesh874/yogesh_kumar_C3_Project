@@ -73,9 +73,9 @@ List<Item> selectedItems = new ArrayList<>();
 Item item1 = restaurant.getMenu().get(0);
 selectedItems.add(item1);
 
-assertEquals(item1.getPrice() ,service.getTotalSum(selectedItems));
+assertEquals(item1.getPrice()+1 ,service.getTotalSum(selectedItems));
 Item item2 = restaurant.getMenu().get(1);
 selectedItems.add(item2);
-assertEquals(item1.getPrice()+item2.getPrice() ,service.getTotalSum(selectedItems));
+assertEquals(item1.getPrice()+item2.getPrice()+1 ,service.getTotalSum(selectedItems));
     }
 }
